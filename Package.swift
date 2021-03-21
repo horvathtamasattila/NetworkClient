@@ -33,7 +33,8 @@ let package = Package(
                 "FirebaseCore",
                 "nanopb",
                 "PromisesObjC",
-                "SwiftProtobuf"
+                "SwiftProtobuf",
+                "FirebaseCoreDiagnostics"
             ]
         ),
         .binaryTarget(
@@ -111,5 +112,10 @@ let package = Package(
             url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/SwiftProtobuf.xcframework.zip",
             checksum: "e5d25fb44bc499a622009b4c295e2a932fd431081de66f340ffae22fc50ea720"
         ),
+        .binaryTarget(
+            name: "FirebaseCoreDiagnostics",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/FirebaseCoreDiagnostics.xcframework.zip",
+            checksum: "bdb26ed1975d7ab5171970b336504f923f3358228382b189de741d57c0781002"
+        )
     ]
 )
