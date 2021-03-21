@@ -10,7 +10,6 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "NetworkClient",
-            type: .static,
             targets: ["NetworkClient"]),
     ],
     dependencies: [
@@ -20,6 +19,9 @@ let package = Package(
         .target(
             name: "NetworkClient",
             dependencies: [
+                "Alamofire",
+                "FBSDKCoreKit",
+                "FBSDKLoginKit"
             ]),
         .binaryTarget(
             name: "Alamofire",
