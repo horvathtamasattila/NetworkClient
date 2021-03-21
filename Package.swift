@@ -29,7 +29,11 @@ let package = Package(
                 "gRPC-C++",
                 "gRPC-Core",
                 "GTMSessionFetcher",
-                "leveldb-library"
+                "leveldb-library",
+                "FirebaseCore",
+                "nanopb",
+                "PromisesObjC",
+                "SwiftProtobuf"
             ]
         ),
         .binaryTarget(
@@ -86,6 +90,26 @@ let package = Package(
             name: "leveldb-library",
             url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/leveldb-library.xcframework.zip",
             checksum: "7162f83a141e5aa580ba17a17edd6764f8e223d034ee33d03f805a4410e5aa08"
+        ),
+        .binaryTarget(
+            name: "FirebaseCore",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/FirebaseCore.xcframework.zip",
+            checksum: "bfdddfa9d5be92ea99eb74b619ee417e57a0bde0fe5517d28b24b90312b16223"
+        ),
+        .binaryTarget(
+            name: "nanopb",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/nanopb.xcframework.zip",
+            checksum: "b621bbd3cf89e3b11e9b4aa23aad02388d0aa168226229a252b876b150f995e4"
+        ),
+        .binaryTarget(
+            name: "PromisesObjC",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/PromisesObjC.xcframework.zip",
+            checksum: "0f07c04d70194992889520ea545c139e895386af25f0b28a83b2369c15dd315e"
+        ),
+        .binaryTarget(
+            name: "SwiftProtobuf",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/SwiftProtobuf.xcframework.zip",
+            checksum: "e5d25fb44bc499a622009b4c295e2a932fd431081de66f340ffae22fc50ea720"
         ),
     ]
 )
