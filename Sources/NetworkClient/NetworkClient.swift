@@ -3,11 +3,11 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 
 public struct NetworkClient {
-    public func networkCall() {
+    public static func networkCall() {
 
     }
 
-    public func facebookLogin() {
-        
+    public static func facebookLogin() {
+
     }
 }
