@@ -34,7 +34,9 @@ let package = Package(
                 "nanopb",
                 "PromisesObjC",
                 "SwiftProtobuf",
-                "FirebaseCoreDiagnostics"
+                "FirebaseCoreDiagnostics",
+                "GoogleDataTransport",
+                "GoogleUtilities"
             ]
         ),
         .binaryTarget(
@@ -116,6 +118,16 @@ let package = Package(
             name: "FirebaseCoreDiagnostics",
             url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/FirebaseCoreDiagnostics.xcframework.zip",
             checksum: "bdb26ed1975d7ab5171970b336504f923f3358228382b189de741d57c0781002"
+        ),
+        .binaryTarget(
+            name: "GoogleDataTransport",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/GoogleDataTransport.xcframework.zip",
+            checksum: "7e131722fa261b5d84f6f77049343bc95fd140dcc2b5a100811c5a71959b0043"
+        ),
+        .binaryTarget(
+            name: "GoogleUtilities",
+            url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/GoogleUtilities.xcframework.zip",
+            checksum: "1bc05d3a5d729e5c1485ce6890c777b6653ea049c16f02e5ede4ad45cb6ed9b0"
         )
     ]
 )
