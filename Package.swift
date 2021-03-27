@@ -7,36 +7,50 @@ let package = Package(
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "NetworkClient",
-            targets: ["NetworkClient"]
+            name: "Alamofire",
+            targets: ["AlamofireTarget"]
         ),
-    ],
-    dependencies: [
+        .library(
+            name: "FacebookLogin",
+            targets: ["FacebookLoginTarget"]
+        ),
     ],
     targets: [
         .target(
-            name: "NetworkClient",
+            name: "AlamofireTarget",
             dependencies: [
-                "Alamofire",
-                "FBSDKCoreKit",
-                "FBSDKLoginKit",
-                "abseil",
-                "BoringSSL-GRPC",
-                "FirebaseAuth",
-                "FirebaseFirestore",
-                "gRPC-C++",
-                "gRPC-Core",
-                "GTMSessionFetcher",
-                "leveldb-library",
-                "FirebaseCore",
-                "nanopb",
-                "PromisesObjC",
-                "SwiftProtobuf",
-                "FirebaseCoreDiagnostics",
-                "GoogleDataTransport",
-                "GoogleUtilities"
+                "Alamofire"
             ]
         ),
+        .target(
+            name: "FacebookLoginTarget",
+            dependencies: [
+                "FBSDKCoreKit",
+                "FBSDKLoginKit"
+            ]
+        ),
+//        .target(
+//            name: "NetworkClient",
+//            dependencies: [
+//                "FBSDKCoreKit",
+//                "FBSDKLoginKit",
+//                "abseil",
+//                "BoringSSL-GRPC",
+//                "FirebaseAuth",
+//                "FirebaseFirestore",
+//                "gRPC-C++",
+//                "gRPC-Core",
+//                "GTMSessionFetcher",
+//                "leveldb-library",
+//                "FirebaseCore",
+//                "nanopb",
+//                "PromisesObjC",
+//                "SwiftProtobuf",
+//                "FirebaseCoreDiagnostics",
+//                "GoogleDataTransport",
+//                "GoogleUtilities"
+//            ]
+//        ),
         .binaryTarget(
             name: "Alamofire",
             url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/Alamofire.xcframework.zip",
