@@ -4,26 +4,22 @@ import PackageDescription
 
 let package = Package(
     name: "NetworkClient",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "Alamofire",
-            type: .dynamic,
             targets: ["AlamofireTarget"]
         ),
         .library(
             name: "FacebookLogin",
-            type: .dynamic,
             targets: ["FacebookLoginTarget"]
         ),
         .library(
             name: "FirebaseAuth",
-            type: .dynamic,
             targets: ["FirebaseAuthTarget"]
         ),
         .library(
             name: "FirebaseFirestore",
-            type: .dynamic,
             targets: ["FirebaseFirestoreTarget"]
         )
     ],
