@@ -14,6 +14,14 @@ let package = Package(
             name: "FacebookLogin",
             targets: ["FacebookLoginTarget"]
         ),
+        .library(
+            name: "FirebaseAuth",
+            targets: ["FirebaseAuthTarget"]
+        ),
+        .library(
+            name: "FirebaseFirestore",
+            targets: ["FirebaseFirestoreTarget"]
+        )
     ],
     targets: [
         .target(
@@ -29,28 +37,37 @@ let package = Package(
                 "FBSDKLoginKit"
             ]
         ),
-//        .target(
-//            name: "NetworkClient",
-//            dependencies: [
-//                "FBSDKCoreKit",
-//                "FBSDKLoginKit",
-//                "abseil",
-//                "BoringSSL-GRPC",
-//                "FirebaseAuth",
-//                "FirebaseFirestore",
-//                "gRPC-C++",
-//                "gRPC-Core",
-//                "GTMSessionFetcher",
-//                "leveldb-library",
-//                "FirebaseCore",
-//                "nanopb",
-//                "PromisesObjC",
-//                "SwiftProtobuf",
-//                "FirebaseCoreDiagnostics",
-//                "GoogleDataTransport",
-//                "GoogleUtilities"
-//            ]
-//        ),
+        .target(
+            name: "FirebaseAuthTarget",
+            dependencies: [
+                "FirebaseAuth",
+                "FirebaseCore",
+                "GoogleUtilities",
+                "GTMSessionFetcher",
+                "FirebaseCoreDiagnostics",
+                "GoogleDataTransport",
+                "nanopb"
+            ]
+        ),
+        .target(
+            name: "FirebaseFirestoreTarget",
+            dependencies: [
+                "abseil",
+                "BoringSSL-GRPC",
+                "FirebaseFirestore",
+                "gRPC-C++",
+                "gRPC-Core",
+                "GTMSessionFetcher",
+                "leveldb-library",
+                "FirebaseCore",
+                "nanopb",
+                "PromisesObjC",
+                "SwiftProtobuf",
+                "FirebaseCoreDiagnostics",
+                "GoogleDataTransport",
+                "GoogleUtilities"
+            ]
+        ),
         .binaryTarget(
             name: "Alamofire",
             url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/Alamofire.xcframework.zip",
