@@ -4,42 +4,22 @@ import PackageDescription
 
 let package = Package(
     name: "NetworkClient",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "Alamofire",
-            targets: ["AlamofireTarget"]
+            targets: ["Alamofire"]
         ),
         .library(
             name: "FacebookLogin",
-            targets: ["FacebookLoginTarget"]
-        ),
-        .library(
-            name: "FirebaseAuth",
-            targets: ["FirebaseAuthTarget"]
-        ),
-        .library(
-            name: "FirebaseFirestore",
-            targets: ["FirebaseFirestoreTarget"]
-        )
-    ],
-    targets: [
-        .target(
-            name: "AlamofireTarget",
-            dependencies: [
-                "Alamofire"
-            ]
-        ),
-        .target(
-            name: "FacebookLoginTarget",
-            dependencies: [
+            targets: [
                 "FBSDKCoreKit",
                 "FBSDKLoginKit"
             ]
         ),
-        .target(
-            name: "FirebaseAuthTarget",
-            dependencies: [
+        .library(
+            name: "FirebaseAuth",
+            targets: [
                 "FirebaseAuth",
                 "FirebaseCore",
                 "GoogleUtilities",
@@ -49,9 +29,9 @@ let package = Package(
                 "nanopb"
             ]
         ),
-        .target(
-            name: "FirebaseFirestoreTarget",
-            dependencies: [
+        .library(
+            name: "FirebaseFirestore",
+            targets: [
                 "abseil",
                 "BoringSSL-GRPC",
                 "FirebaseFirestore",
@@ -67,7 +47,9 @@ let package = Package(
                 "GoogleDataTransport",
                 "GoogleUtilities"
             ]
-        ),
+        )
+    ],
+    targets: [
         .binaryTarget(
             name: "Alamofire",
             url: "https://github.com/horvathtamasattila/Dependencies/releases/download/1.1.0/Alamofire.xcframework.zip",
